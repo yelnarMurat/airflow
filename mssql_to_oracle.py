@@ -26,7 +26,7 @@ from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
  
  
-class MsSqlToHiveTransfer(BaseOperator):
+class MsSqlToOracleTransfer(BaseOperator):
     
  
     template_fields = ('sql', 'partition', 'hive_table')
@@ -45,7 +45,7 @@ class MsSqlToHiveTransfer(BaseOperator):
             mssql_conn_id='mssql_default',
             oracle_conn_id='oracle_conn_id',
             *args, **kwargs):
-        super(MsSqlToHiveTransfer, self).__init__(*args, **kwargs)
+        super(MsSqlToOracleTransfer, self).__init__(*args, **kwargs)
         self.sql = sql
         self.oracle_table = oracle_table
         self.partition = partition

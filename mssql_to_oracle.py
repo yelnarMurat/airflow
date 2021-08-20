@@ -37,7 +37,7 @@ class MsSqlToOracleTransfer(BaseOperator):
     def __init__(
             self,
             sql,
-            hive_table,
+            oracle_table,
             create=True,
             recreate=False,
             partition=None,
